@@ -26,3 +26,29 @@ function findUniq(arr) {
         if (frequency[key] === 1) return parseFloat(key); // Convert key back to number before returning
     }
 }
+
+/* Explanation: 
+
+1. Initialize Frequency Object:
+
+- Create an empty object frequency to store the count of each element in the array.
+
+2. Populate the Frequency Object:
+
+- Loop through the array arr.
+
+- For each element, check if it already exists in the frequency object.
+
+- If it does not exist, add it to the object with a count of 1.
+
+- If it does exist, increment its count by 1.
+
+3. Find the Unique Element:
+
+- Loop through the keys of the frequency object.
+
+- Check if the count of any key is 1.
+
+- Return the key (converted back to a number) that has a count of 1.
+
+This approach ensures that we only need two passes through the data: one to build the frequency map and another to find the unique element. This is efficient and works well for large arrays. */
